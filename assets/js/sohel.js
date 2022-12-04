@@ -54,21 +54,30 @@ let banner_sam = document.querySelector('.banner_same');
 let css_mt_height = `margin-top: ${header_height}px;`;
 
 function addClass_on_scroll() {
-    headerBox.classList.add("header_scroll","py-1");
+    headerBox.classList.add("header_scroll", "py-1");
 
     banner_sam.style.cssText = css_mt_height;
 }
 
 function removeClass_on_scroll() {
-    headerBox.classList.remove("header_scroll","py-1");
+    headerBox.classList.remove("header_scroll", "py-1");
     banner_sam.style.cssText = `margin-top: 0px;`;
 
 }
 window.addEventListener('scroll', function () {
-    if (window.scrollY > `${header_height}`*1) {
+    if (window.scrollY > `${header_height}` * 1) {
         let scrollY = window.scrollY;
         addClass_on_scroll();
     } else {
         removeClass_on_scroll();
     }
 });
+function yourFunction() {
+    if (window.innerWidth > 991) {
+        let why_choose_content = document.getElementById("why_choose_content").clientHeight;
+        let why_choose_img = document.getElementById("why_choose_img");
+        why_choose_img.style.cssText = `height: ${why_choose_content}px; position:relative;`;
+
+    }
+}
+window.onload = window.onresize = yourFunction;

@@ -192,8 +192,15 @@ section {
 
 .btn_dark {
     background-color: var(--light-dark);
+    border: 1px solid transparent;
     color: var(--white);
     border-radius: 50rem;
+}
+
+.btn_dark:hover {
+    background-color: transparent;
+    border: 1px solid var(--light-dark);
+    color: var(--light-dark);
 }
 
 .btn_yellow {
@@ -283,17 +290,18 @@ section {
 
 .product-grid .product-links li {
     margin: 0 2px;
-   
+
 }
 
 .product-grid .product-links li a {
     color: #000;
-    background-color: #eee; 
-    text-align: center; 
+    background-color: #eee;
+    text-align: center;
     width: 2rem;
     height: 2rem;
     border-radius: 5px;
-    display: grid;place-content: center;
+    display: grid;
+    place-content: center;
     position: relative;
     transition: all .3s ease;
     z-index: 1
@@ -349,6 +357,111 @@ section {
         margin-bottom: 30px
     }
 }
-a{
+
+a {
     text-decoration: none;
+}
+
+.why_choose_icon {
+    position: relative;
+    width: fit-content;
+}
+
+.why_choose_icon i {
+    font-size: 2rem;
+    color: var(--light-dark);
+}
+
+.why_choose_icon::after {
+    position: absolute;
+    right: -1.5rem;
+    bottom: -.5rem;
+    --hw: 3rem;
+    height: var(--hw);
+    width: var(--hw);
+    border-radius: 20rem;
+    content: "";
+    background-color: #66bdb694;
+    z-index: -1;
+}
+
+#why_choose_img .main_img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.why_choose_dots {
+    position: absolute;
+    top: -5rem;
+    z-index: -1;
+    left: -5rem;
+}
+
+.we_help_dots {
+    position: absolute;
+    top: -5rem;
+    z-index: -1;
+    left: -5rem;
+}
+
+#we_help_content i {
+    color: var(--theme-color);
+}
+
+@media (min-width:768px) {
+    .we_help_innerimg {
+        margin-left: -3rem;
+    }
+}
+
+#we_help_img img {
+    border-radius: .5rem;
+}
+
+.testimonials img {
+    --hw: 4rem;
+    height: var(--hw);
+    width: var(--hw);
+    border-radius: 20rem;
+}
+
+.carousel-indicators [data-bs-target] {
+    margin-bottom: -2rem;
+    width: .35rem;
+    background-color: var(--theme-color);
+    height: .35rem;
+    transition: .3s;
+}
+
+.carousel-indicators .active {
+    width: 1.5rem;
+
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+
+    background: var(--section-bg);
+    height: 3rem;
+    width: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50rem;
+    color: var(--theme-color);
+}
+
+.carousel-control-next i,
+.carousel-control-prev i {
+
+    color: var(--theme-color);
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    display: grid;
+    place-content: center;
+    background-image: none;
+
 }
