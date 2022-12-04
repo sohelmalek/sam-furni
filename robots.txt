@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: https://sohelmalek.github.io/sam-furni/sitemap.xml
