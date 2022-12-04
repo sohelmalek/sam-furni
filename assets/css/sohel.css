@@ -559,7 +559,10 @@ footer p {
     .navbar-brand {
         color: var(--white)
     }
-
+    .offcanvas_logo,
+    header .nav-link {
+        color: var(--light-dark);
+    }
     .header_scroll .navbar-brand {
         color: var(--light-dark)
     }
